@@ -18,7 +18,8 @@ class Student():
     def getName(self):
         return self.name
     def getDegree(self):
-        return self.degree
+        return self.degree 
+
 
     def printStudent(self):
         print("Name:", self.getName(),"\nDegree:",self.getDegree())
