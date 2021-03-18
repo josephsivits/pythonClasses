@@ -19,12 +19,8 @@ class Student():
     def getDegree(self):
         return self.degree 
 
-
     def printStudent(self):
-        print("Name:", self.getName(),"\nDegree:",self.getDegree())
-
-
-
+        print("\nName:", self.getName(),"\nDegree:",self.getDegree())
 
 s = Student()
 name = input("What is your name: ")
