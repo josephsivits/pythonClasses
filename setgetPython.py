@@ -1,8 +1,7 @@
 '''
+March 18 2021
 sname and degree
 set, get, print methods
-
-
 '''
 
 class Student():
