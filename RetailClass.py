@@ -9,9 +9,9 @@ class Account:
         self.shopList = {}
 
     def printShopList(self):
-        print("Item", "      ", "Price")
+        print("Item\t\t\tPrice")
         for x, y in self.shopList.items():
-            print(x, '       ', "$", y)
+            print(x,"\t\t\t$", y)
 
         print()
 
@@ -36,28 +36,35 @@ class Account:
 class Store:
 
     def __init__(self):
-        self.storeItems = {"Hat": 1111, "Shoes": 1111, "Pants": 1111, "Shirt": 1111, "Belt": 1111}
+        self.storeItems = {"GG Bucket Hat": 530, "GG Baseball Hat": 390, "GG Print Joggers": 1020, "GG Jacquard Joggers": 1380, "Leather Dr. G Belt": 360, "Gucci Logo Shirt":590,"GG Print Polo":1150,"GG Rhyton Sneakers":790,"Ace Supreme Sneaker":590}
 
     def printStore(self):
-        print("#", "Item", "      ", "Price")
+        print("#", "Item", "\t\t\t\t\t", "Price")
         count = int(1)
         for x, y in self.storeItems.items():
-            print(count, x, '       ', "$", y)
+            print(count, x, '\t\t\t', "$", y)
             count += 1
 
 
 def buy(acc, num):
     if num == 1:
-        acc.addItem("Hat", 1111)
+        acc.addItem("GG Bucket Hat", 530)
     elif num == 2:
-        acc.addItem("Shoes", 1111)
+        acc.addItem("GG Baseball Hat", 390)
     elif num == 3:
-        acc.addItem("Pants", 1111)
+        acc.addItem("GG Print Joggers", 1020)
     elif num == 4:
-        acc.addItem("Shirt", 1111)
+        acc.addItem("GG Jacquard Joggers", 1380)
     elif num == 5:
-        acc.addItem("Belt", 1111)
-
+        acc.addItem("Leather Dr. G Belt", 360)
+    elif num ==6:
+        acc.addItem("Leather Dr. G Belt", 360)
+    elif num == 7:
+        acc.addItem("Leather Dr. G Belt", 360)
+    elif num == 8:
+        acc.addItem("Leather Dr. G Belt", 360)
+    elif num == 9:
+        acc.addItem("Leather Dr. G Belt", 360)
 
 # This is the main driver
 
