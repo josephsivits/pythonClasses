@@ -6,5 +6,4 @@ class xyz:
 obj = xyz()
 print(obj)
 
-print(37**(107))
-print(-2%5)
+print(((-14)+4)%8)
