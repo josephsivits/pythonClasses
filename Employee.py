@@ -24,6 +24,7 @@ print the salary details
 
 2 funcitons, employee details and pay details
 
+create a display class that inherits from an employee class
 
 '''
 
@@ -62,12 +63,10 @@ class Allowance(Employee):
         self.printSalary()
 
     def getCurrentMonth(self):
-        currMonth = int(input("What is the current month: "))
+        currMonth = int(input("What is the current month(0-12): "))
         if currMonth == self.dobMonth:
+            print("Happy birthday! (month)")
             self.salary += 100
-
-    def convertHoursToMonths(self,hours):
-        return hours*12;
 
     def printSalary(self):
         for i in range(0,3):
