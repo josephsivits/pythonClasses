@@ -16,7 +16,7 @@ pay is 15 hours
 input of montly pay
 annual pay for the year
 
-elements class
+allowance class
 inherits employee class
 get input of the current month
 adding the allowance to 100
@@ -73,6 +73,10 @@ class Allowance(Employee):
             if self.payType[i] > 0:
                 self.salary += self.payType[i]
                 print("Monthly Salary: ", self.salary)
+
+# testing multiple inheritance I think
+class Display(Employee):
+
 
 emp2=Allowance()
 
