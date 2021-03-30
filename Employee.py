@@ -1,4 +1,5 @@
 '''
+Requirements:
 Employee Pay Stub
 	Employee: ID, Name, Department, Designmation, DOB, Address
 	Pay Details: Hourly/Monthly/Annually, Pay Rate/Pay, Allowances
@@ -11,7 +12,7 @@ Allowance is derived class
 
 2 functions for getting infor from the users
 
-
+Notes
 pay is 15 hours
 input of montly pay
 annual pay for the year
@@ -29,7 +30,6 @@ create a display class that inherits from an employee class
 '''
 
 class Employee:
-    # maybe don't do init...
     def __init__(self):
         self.empSalary = 0
 
@@ -106,8 +106,3 @@ class Display(Employee):
         print("Monthly Salary:", self.empSalary)
 
 employee = Display()
-
-
-
-
-    
