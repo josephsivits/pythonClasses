@@ -30,6 +30,24 @@ create a display class that inherits from an employee class
 
 class Employee:
     # maybe don't do init...
+    def __init__(self):
+        self.empSalary = 0
+
+    def setBirthMonth(self):
+        birthMonth = int(input("What is your birth month(1-12): "))
+        if(birthMonth > 12 or birthMonth < 1):
+            print("!ERROR! Invalid Input Not in Range\n")
+            self.setBirthMonth()
+        else:
+            self.dobMonth=birthMonth
+
+    def setBirthDate(self):
+        birthDay = int(input("What is your birth day(1-31): "))
+        if(birthDay > 31 or birthDay < 1):
+            print("!ERROR! Invalid Input Not in Range\n")
+            self.setBirthDate()
+        else:
+            self.dobDay=birthDay
 
         # 2 functions for getting inputs, employee details and pay details
     def employeeDetails(self):
@@ -37,13 +55,15 @@ class Employee:
         self.name=input("What is your name: ")
         self.department=input("What is your department: ")
         self.designation=input("What is your title: ")
-        self.dobMonth=int(input("What is your birth month(1-12): "))
-        self.dobDay=int(input("What is your birth day(1-31): "))
+        self.setBirthMonth()
+        self.setBirthDate()
         
     def payDetails(self):
         self.payType = [0,0,0]
         payIndex = int(input("What type of pay are you\n0 = Hourly\n1 = Monthly\n2 = Annually\n"))
-    
+        if payIndex < 0 or payIndex > 2:
+            print("!ERROR! Invalid Input Not in Range\n")
+            self.payDetails()
         if payIndex == 0:
             hourPay = int(input("How many hours do you work in a month: "))
             self.payType[payIndex] = 15*hourPay
@@ -72,13 +92,18 @@ class Allowance(Employee):
         for i in range(0,3):
             if self.payType[i] > 0:
                 self.salary += self.payType[i]
+                self.empSalary = self.salary
                 print("Monthly Salary: ", self.salary)
 
 # testing multiple inheritance I think
 class Display(Employee):
+    emp=Allowance()
+    def printEmpSalary(self):
+        print("Monthly Salary:", self.empSalary)
+
+employee = Display()
 
 
-emp2=Allowance()
 
 
     
