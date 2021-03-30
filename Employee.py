@@ -43,8 +43,12 @@ class Employee:
 
     def setBirthDate(self):
         birthDay = int(input("What is your birth day(1-31): "))
+        monthDays = [31,28,31,30,31,30,31,31,30,31,30,31]
         if(birthDay > 31 or birthDay < 1):
             print("!ERROR! Invalid Input Not in Range\n")
+            self.setBirthDate()
+        elif(birthDay > monthDays[self.dobMonth - 1]):
+            print("!ERROR! Day out of range for month\n")
             self.setBirthDate()
         else:
             self.dobDay=birthDay
