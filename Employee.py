@@ -27,6 +27,7 @@ print the salary details
 
 create a display class that inherits from an employee class
 
+employee allowances
 '''
 
 class Employee:
@@ -84,7 +85,7 @@ class Allowance(Employee):
         self.employeeDetails()
         self.payDetails()
         self.getCurrentMonth()
-        self.printSalary()
+        self.calculateSalary()
 
     def getCurrentMonth(self):
         currMonth = int(input("What is the current month(0-12): "))
@@ -92,12 +93,13 @@ class Allowance(Employee):
             print("Happy birthday! (month)")
             self.salary += 100
 
-    def printSalary(self):
+
+    def calculateSalary(self):
         for i in range(0,3):
             if self.payType[i] > 0:
                 self.salary += self.payType[i]
                 self.empSalary = self.salary
-                print("Monthly Salary: ", self.salary)
+                print("Monthly Salary:", self.salary)
 
 # testing multiple inheritance I think
 class Display(Employee):
