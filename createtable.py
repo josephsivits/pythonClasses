@@ -7,9 +7,10 @@ connection = sqlite3.connect("mytable.db")
 # Cursor
 crsr = connection.cursor()
 
-# SQL command to delete the table
+# if first time running need node below
+#   SQL command to delete the table
 sql_cmd = """Drop table s_emp;"""
-# execute the statement
+#   execute the statement
 crsr.execute(sql_cmd)
 
 # SQL command to create a table in the database
