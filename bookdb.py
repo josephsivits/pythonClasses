@@ -23,7 +23,6 @@ sql_cmd = """DROP TABLE Author;"""
 crsr.execute(sql_cmd)
 sql_cmd = """DROP TABLE Publisher;"""
 crsr.execute(sql_cmd)
-
 sql_cmd = """DROP TABLE Titles;"""
 crsr.execute(sql_cmd)
 
