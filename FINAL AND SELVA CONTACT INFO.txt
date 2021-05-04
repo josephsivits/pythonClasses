@@ -1,0 +1,15 @@
+inheritence
+polymorphism
+databases
+data sets
+
+will be given a dataset and will write different functions to handle the dataset
+find total number of students who passed
+python function to write first five rows -- head
+last 5 rows -- tail
+how many records and rows there are use the shed(share) functions
+read functionsa and understand what is given
+
+
+selvanayakishanmugam@gmail.com
+847 769 1489
